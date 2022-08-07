@@ -5,13 +5,6 @@ import java.util.*;
 public class Polygon {
     public static ArrayList<Point> points;
 
-    public static void main(String[] args) {
-        //Write here the path name of the kml file.
-        File file = new File("src/Allowed area.kml");
-        Polygon polygon = new Polygon(file);
-        System.out.println(polygon.isOn());
-    }
-
     //creating the polygon by the coordinates order.
     public Polygon(File file) {
         this.points = new ArrayList<>();

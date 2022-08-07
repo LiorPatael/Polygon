@@ -1,3 +1,6 @@
+
+//This class represent the polygon's coordinates.
+
 public class Point {
     private double x, y, z;
     private int id;

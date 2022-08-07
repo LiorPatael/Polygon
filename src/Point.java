@@ -1,5 +1,5 @@
 
-//This class represent the polygon's coordinates.
+//This class represent the Polygon coordinates.
 
 public class Point {
     private double x, y, z;

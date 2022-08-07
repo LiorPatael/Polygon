@@ -22,7 +22,7 @@ public class Polygon {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        //load the coordinates
+        //loads the coordinates
         String[] coordinates = str.split(" ");
         int id = 0;
         for (String point : coordinates) {
@@ -34,7 +34,7 @@ public class Polygon {
     }
 
     /*
-    this function calculate the polygon area by the shoelace formula.
+    This function calculate the polygon area by the shoelace formula.
     https://en.wikipedia.org/wiki/Shoelace_formula
      */
     public double polygonArea() {
@@ -51,7 +51,7 @@ public class Polygon {
     }
 
     /*
-    return if the point is in side of the polygon or not.
+    returns if the point is in side of the polygon or not.
     If not, this function will return the must closest distance between the point to the polygon.
      */
     public boolean isOn() {
@@ -88,7 +88,7 @@ public class Polygon {
         }
         checkPoint.setID(ansEdge.getDest().getId()); //adding the check point to the polygon
 
-        //creat a new polygon by adding the check point.
+        //creates a new polygon by adding the check point.
         points.add(ansEdge.getDest().getId(), checkPoint);
         for (int i = checkPoint.getId(); i < points.size(); i++) {
             points.get(i).setID(i);
@@ -104,8 +104,8 @@ public class Polygon {
     }
 
     /*
-    return the distance between the meeting point that came from the two Linear equations.
-    The first equation is the edge Linear equation.
+    returns the distance between the meeting point that came from the two Linear equations.
+    The first equation is the edge's Linear equation.
     The second equation came from the opposite edge incline.
     https://www.sikumuna.co.il/wiki/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%97%D7%99%D7%AA%D7%95%D7%9A_%D7%A9%D7%9C_%D7%A9%D7%A0%D7%99_%D7%99%D7%A9%D7%A8%D7%99%D7%9D
     if the meeting point is not on the edge, the function return -1.

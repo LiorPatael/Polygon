@@ -1,3 +1,4 @@
+//This class represant the Polygon edges.
 public class Edge {
     private double dist;
     private Point src, dest;
@@ -20,10 +21,6 @@ public class Edge {
         double yValue = this.dest.getY() - this.src.getY();
         double xValue = this.dest.getX() - this.src.getX();
         return yValue / xValue;
-    }
-
-    public double getDist(){
-        return this.src.distance(this.dest);
     }
 
     public boolean onEdge(Point check) {
